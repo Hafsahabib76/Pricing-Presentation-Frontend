@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import ChartDataLabels from 'chartjs-plugin-datalabels'; // Import the data label plugin
 
 @Component({
   selector: 'app-incentive-simulation',
@@ -7,16 +8,27 @@ import { Component } from '@angular/core';
 })
 export class IncentiveSimulationComponent {
 
-  //data for Incentive Simulation
-  offerVolumeListPrice = 214933;
-  topDiscount = 22.0;
-  targetDiscount = 25.7;
-  floorDiscount = 29.4;
+  offerVolumeListPrice = 10000;
+  topDiscount = 15;
+  targetDiscount = 10;
+  floorDiscount = 5;
+  incentiveForDeal = 'Achieve a 12% discount incentive';
+  realisticDiscountScenario = 'Expected discount scenario analysis';
+  
+  // Chart view size
+  view: [number, number] = [250, 250];
 
-  // Incentive for this deal (example data)
-  incentiveForDeal = 'Incentive details would be displayed here.';
+  // Chart data
+  incentiveChartData = [
+    { name: 'Value 1', value: 0 },
+    { name: 'Value 2', value: 0 },
+    { name: 'Value 3', value: 137 },
+    { name: 'Value 4', value: 0 },
+    { name: 'Value 5', value: 0 }
+  ];
 
-  // Realistic discount scenario (example data)
-  realisticDiscountScenario = 'Scenario details would be displayed here.';
+
+  // Color scheme
+  colorScheme = "vivid"
 
 }

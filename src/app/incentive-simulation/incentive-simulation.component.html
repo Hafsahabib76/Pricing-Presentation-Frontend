@@ -13,6 +13,19 @@
     <div class="section">
       <h3>Incentive for this deal</h3>
       <p>{{ incentiveForDeal }}</p>
+
+      <ngx-charts-bar-vertical
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="incentiveChartData"
+      [gradient]="false"
+      [xAxis]="false"
+      [yAxis]="true"
+      [legend]="false"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Incentive in %'"
+      >
+    </ngx-charts-bar-vertical>
     </div>
 
     <!-- Third Section -->
